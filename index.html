@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Small project two</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <p id="today"></p>
+  <p id="holder"></p>
+</div>
+<div class ='footer'>2024&copy; Dennis Barasa</div>
+<script>
+ const watch = setInterval(function(){
+    const toDay = new Date();
+    const tohours = toDay.getHours();
+    const toMin = toDay.getMinutes();
+    const toSec = toDay.getSeconds();
+    const myTime = (`${tohours}:${toMin}:${(toSec)}`);
+    document.getElementById('today').innerHTML = myTime;
+    },1000)
+
+
+ function theDate() { 
+  const myDay = new Date();
+  const today = myDay.getDay();
+   /*document.getElementById('holder');*/
+  let holder1 = document.getElementById('holder');
+
+  switch(today){
+    case 1:
+      holder1.innerHTML =`It's monday again HAHA`;
+    break;
+    case 2:
+      holder1.innerHTML = `The moment you realize it's only Tuesday`;
+      break;
+    case 3:
+      holder1.innerHTML = `It's Wednesday but I want Friday`;
+      break;
+    case 4:
+      holder1.innerHTML = 'Im ready to have a great Thursday';
+      break;
+    case 5:
+      holder1.innerHTML = 'Well Well Well.. Look what decided to show up.. Hello Friday';
+      break;
+    case 6:
+      holder1.innerHTML = `Thanks God it's Saturday`;
+      break;
+    case 0:
+      holder1.innerHTML =`We Pray and preach, it's Sunday`;
+      default:
+  }
+ }
+ theDate();
+//console.log(holder1);
+</script>
+</body>
+</html>
